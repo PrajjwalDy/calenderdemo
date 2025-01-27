@@ -146,8 +146,8 @@ body {
 .test-centers {
   flex: 3;
   display: flex;
-  justify-content: space-around;
-  gap: 10px;
+  gap: 20px;
+  margin-left: 20px;
 }
 
 .center {
