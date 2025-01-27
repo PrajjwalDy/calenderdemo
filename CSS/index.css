@@ -183,3 +183,47 @@ body {
 .book-btn:hover {
   background-color: #ccccff;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    height: auto; /* Allow content to dictate height */
+  }
+
+  .header h1 {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+
+  .tabs {
+    gap: 5px;
+    flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+  }
+
+  .tab {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .test-row {
+    height: auto; /* Let content dictate row height */
+    flex-direction: column; /* Stack content vertically */
+    padding: 10px;
+  }
+
+  .test-info.enhanced {
+    height: auto;
+    flex: none; /* Adjust flex to prevent stretching */
+    margin-bottom: 10px;
+  }
+
+  .test-centers {
+    flex-direction: column; /* Stack centers vertically */
+    margin-left: 0;
+    gap: 10px;
+  }
+
+  .center {
+    min-width: auto; /* Allow flexible widths */
+  }
+}
