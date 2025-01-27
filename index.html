@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mockTestsApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Tests Timetable</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="/CSS/index.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body ng-controller="MockTestsController">
+  <div class="header">
+    <h1>Mock Tests 2025</h1>
+    <img src="src/logo2.png" alt="Logo" style="height: 50px; width: 150px;">
+  </div>
+
+  <div class="container">
+    
+    <div class="tabs">
+      <div 
+        class="tab" 
+        ng-class="{active: selectedMonth === month}" 
+        ng-repeat="month in months" 
+        ng-click="selectMonth(month)">
+        {{ month }}
+      </div>
+    </div>
+
+    <div class="timetable-wrapper">
+      <div class="timetable">
+        <div class="test-row" ng-repeat="test in timetable[selectedMonth]">
+          <div class="test-info enhanced">
+            <div class="test-date">{{ test.date }}</div>
+            <h3 class="testName">{{ test.name }}</h3>
+            <p class="testTopic">{{ test.description }}</p>
+          </div>
+          <div class="test-centers">
+            <div 
+              class="center" 
+              ng-repeat="center in test.centers" 
+              ng-class="{'online': center.name === 'Online'}">
+              <p>{{ center.name }}</p>
+              <p>{{ center.time }}</p>
+              <a class="book-btn" ng-href="{{ center.url }}" target="_blank">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

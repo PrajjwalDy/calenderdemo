@@ -1,0 +1,185 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("https://www.sehyog.co.uk/features.687ba4ff9ab744460e49.jpg");
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 700px /* Full viewport height */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.header h1 {
+  font-size: 24px;
+  color:white;
+  padding-left: 50px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.tab {
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  background-color: #dcd6ff;
+  font-weight: bold;
+}
+
+.timetable-wrapper {
+  flex: 1;
+  overflow-y: auto; /* Allow scrolling for timetable content */
+}
+
+.timetable-wrapper::-webkit-scrollbar {
+  width: 6px; /* Width of the vertical scrollbar */
+  height: 6px; /* Height of the horizontal scrollbar */
+}
+
+.timetable-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 10px;
+}
+
+.timetable-wrapper::-webkit-scrollbar-thumb {
+  background: #dcd6ff; /* Color of the scrollbar thumb */
+  border-radius: 10px;
+}
+
+.timetable-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #bcb2ff; /* Color when hovered */
+}
+
+/* For Firefox */
+.timetable-wrapper {
+  scrollbar-width: thin; /* Reduce the width of the scrollbar */
+  scrollbar-color: #dcd6ff #f1f1f1; /* Thumb color | Track color */
+}
+
+.timetable {
+  margin-top: 20px;
+}
+
+.test-row {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  background-color: #e2e1e1;
+  margin: 10px 0;
+  border-radius: 15px;
+}
+
+
+.test-info.enhanced {
+  height: 150px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffecec;
+  border-left: 10px solid #ff5252;
+  border-radius: 15px 0 0 15px;
+  text-align: center;
+}
+
+.testTopic{
+  margin: 5px;
+}
+
+
+.test-date {
+  width: 70px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.test-row:nth-child(odd) .test-info.enhanced {
+  border-left: 10px solid #ff5252;
+  background-color: #ffecec;
+}
+
+.test-row:nth-child(even) .test-info.enhanced {
+  border-left: 10px solid #824C97;
+  background-color: #D2B8DB;
+}
+
+
+.test-centers {
+  flex: 3;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.center {
+  background-color: #e6f7ff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.center.online {
+  background-color: #FFAF50;
+}
+
+.book-btn {
+  display: inline-block; /* Ensure the width adapts to content */
+  background-color: #ffffff;
+  padding: 5px 15px;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center; /* Center align text inside button */
+  min-width: 80px; /* Optional: Set a minimum width */
+}
+
+.book-btn:hover {
+  background-color: #ccccff;
+}
+
+
+.book-btn:hover {
+  background-color: #ccccff;
+}
